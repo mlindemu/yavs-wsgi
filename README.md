@@ -13,7 +13,7 @@ The following VIM plugins and programs are installed only if they are not alread
 * [Syntastic](https://github.com/scrooloose/syntastic) - A comprehensive syntax highlighting plugin.
 * [vim-bundle-mako](https://github.com/sophacles/vim-bundle-mako) - Mako is not included in syntastic.  This plugin is included to alleviate that.
 * [Lint.vim](https://github.com/joestelmach/lint.vim) - A javascript and css lint syntax checker.
-    * * [D8 from Google V8](https://code.google.com/p/v8/) - Javascript engine used by Lint.vim to check javascript syntax.  Downloads, compiles, installs, and removes source afterwards.
+    * [D8 from Google V8](https://code.google.com/p/v8/) - Javascript engine used by Lint.vim to check javascript syntax.  Downloads, compiles, installs, and removes source afterwards.
 * [jedi-vim](https://github.com/davidhalter/jedi-vim) - A Python autocomplete plugin.
 
 All plugins are installed under: *~/.vim/bundle*
