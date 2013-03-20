@@ -56,7 +56,7 @@ fi
 # Install Vim-Jedi Plugin
 if [ ! -d ~/.vim/bundle/jedi-vim ]
 then
-    echo "Installing Jedi Plugin. For Python autocompletion.  Please install jedi on both your system and every pyramid virtualenv using pip or easy_install."
+    echo "Installing Jedi Plugin. For Python autocompletion.  Please install jedi on both your system and every wsgi virtualenv using pip or easy_install."
     git clone git://github.com/davidhalter/jedi-vim.git ~/.vim/bundle/jedi-vim
 fi
 
