@@ -1,4 +1,4 @@
-# Yet Another VIM Setup - WSGI Edition
+# Yet Another VIM Setup - Python WSGI Edition
 This is the setup script I use on new WSGI development machines.  Feel free to comment or edit as you see fit.
 
 # How To Run?
