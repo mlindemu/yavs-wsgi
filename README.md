@@ -2,10 +2,12 @@
 This is the setup script I use on new WSGI development machines.  Feel free to comment or edit as you see fit.
 
 # How To Run?
-  # git clone git://github.com/mlindemu/yavs-wsgi.git
-  # cd yavs-wsgi
-  # chmod 755 yavs-wsgi.sh
-  # ./yavs-wsgi.sh
+`
+# git clone git://github.com/mlindemu/yavs-wsgi.git
+# cd yavs-wsgi
+# chmod 755 yavs-wsgi.sh
+# ./yavs-wsgi.sh
+`
 
 # What is Installed?
 The following VIM plugins are installed only if they are not already present on your machine:
