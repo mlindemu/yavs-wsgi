@@ -38,12 +38,17 @@ fi
 if [ ! -f /usr/local/bin/d8 ]
 then
     echo "Installing D8 for Lint.Vim.  Please be patient..."
-    git clone git://github.com/v8/v8.git v8 && cd v8
+    if [ ! -d ~/v8 ]
+    then
+        git clone git://github.com/v8/v8.git ~/v8 && cd ~/v8
+    fi
+
+    cd ~/v8
     make dependencies
     make native
-    sudo cp out/native/d8 /usr/local/bin/
+    sudo cp ~/v8/out/native/d8 /usr/local/bin/
     cd ..
-    rm -rf v8
+#    rm -rf ~/v8
 fi
 
 # Git Lint.Vim
