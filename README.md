@@ -18,6 +18,9 @@ The following VIM plugins are installed only if they are not already present on 
 
 All plugins are installed under: *~/.vim/bundle*
 
+# After Install
+After installing the packages above, you must manually install jedi on both your system and in any WSGI project virtualenv using either easy_install or pip.
+
 # Suggestions?
 Please feel free to suggest any other VIM plugins you find helpful on your WSGI development machines!  Just make an issue and I'll look into adding it.
 
