@@ -11,6 +11,8 @@ The following VIM plugins are installed only if they are not already present on 
 * [Lint.vim](https://github.com/joestelmach/lint.vim) - A javascript and css lint syntax checker.
 * [jedi-vim](https://github.com/davidhalter/jedi-vim) - A Python autocomplete plugin.
 
+All plugins are installed under: *~/.vim/bundle*
+
 # Suggestions?
 Please feel free to suggest any other VIM plugins you find helpful on your WSGI development machines!  Just make an issue and I'll look into adding it.
 
