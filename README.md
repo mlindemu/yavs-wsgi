@@ -1,7 +1,7 @@
 # Yet Another VIM Setup - Python WSGI Edition
 This is the setup script I use on new WSGI development machines.  Feel free to comment or edit as you see fit.
 
-# How To Run?
+# Install
     git clone git://github.com/mlindemu/yavs-wsgi.git
     cd yavs-wsgi
     ./yavs-wsgi.sh
