@@ -15,6 +15,7 @@ The following VIM plugins and programs are installed only if they are not alread
 * [Lint.vim](https://github.com/joestelmach/lint.vim) - A javascript and css lint syntax checker.
     * [D8 from Google V8](https://code.google.com/p/v8/) - Javascript engine used by Lint.vim to check javascript syntax.  Downloads, compiles, installs, and removes source afterwards.
 * [Jedi-vim](https://github.com/davidhalter/jedi-vim) - A Python autocomplete plugin.
+* [VIM-Flake8](https://github.com/nvie/vim-flake8) - A Vim plugin that runs the currently open file through Flake8, a static syntax and style checker for Python source code. 
 
 All plugins are installed under: *~/.vim/bundle*
 
