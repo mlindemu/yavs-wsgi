@@ -59,12 +59,12 @@ then
 fi
 
 # Install Vim-Jedi Plugin
-if [ ! -d ~/.vim/bundle/jedi-vim ]
-then
-    echo "Installing Jedi plugin for Python autocompletion.  Please install jedi on every virtualenv using pip or easy_install."
-    git clone git://github.com/davidhalter/jedi-vim.git ~/.vim/bundle/jedi-vim
-    sudo pip install jedi
-fi
+#if [ ! -d ~/.vim/bundle/jedi-vim ]
+#then
+#    echo "Installing Jedi plugin for Python autocompletion.  Please install jedi on every virtualenv using pip or easy_install."
+#    git clone git://github.com/davidhalter/jedi-vim.git ~/.vim/bundle/jedi-vim
+#    sudo pip install jedi
+#fi
 
 # Install Vim-Flake8 for PEP8 Checking
 if [ ! -d ~/.vim/bundle/vim-flake8 ]
