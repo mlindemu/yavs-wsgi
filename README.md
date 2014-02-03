@@ -19,7 +19,7 @@ The following VIM plugins and programs are installed only if they are not alread
 All plugins are installed under: *~/.vim/bundle*
 
 # After Install
-After installing the packages above, you must manually install jedi on both your system and in any WSGI project virtualenv using either easy_install or pip.
+After installing the packages above, you must manually install flake8 on both your system and in any WSGI project virtualenv using either easy_install or pip.
 
 # Suggestions?
 Please feel free to suggest any other VIM plugins you find helpful on your WSGI development machines!  Just make an issue and I'll look into adding it.
