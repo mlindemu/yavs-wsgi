@@ -2,7 +2,7 @@
 
 # Install dependencies
 echo "Installing dependencies with apt-get"
-sudo apt-get install -y git subversion gyp
+sudo apt-get install git subversion gyp
 
 # Install Pathogen
 if [ ! -d ~/.vim/autoload ]
@@ -41,25 +41,45 @@ fi
 # First Setup D8 if required
 if [ ! -f /usr/local/bin/d8 ]
 then
-    echo "Installing D8 for Lint.Vim.  Please be patient..."
-    if [ ! -d ~/v8 ]
-    then
-        git clone git://github.com/v8/v8.git ~/v8 && cd ~/v8
-    fi
+    echo "D8 not found.  Javascript linting plugin will not work without it.  Do you want to install it now?  (Warning: this can take awhile):"
+    select yn in "Yes" "No"; do
+        case $yn in
+            Yes )
+                echo "Installing Chromium Depot Tools for building V8"
+                git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git ~/depot_tools
+                export PATH=~/depot_tools:"$PATH"
 
-    cd ~/v8
-    make -j `nproc` dependencies
-    make -j `nproc` native
-    sudo cp ~/v8/out/native/d8 /usr/local/bin/
-    cd ..
-#    rm -rf ~/v8
+                echo "Installing D8 for Lint.Vim.  Please be patient..."
+                if [ ! -d ~/v8 ]
+                then
+                    git clone git://github.com/v8/v8.git ~/v8 && cd ~/v8
+                fi
+
+                cd ~/v8
+                make -j `nproc` dependencies
+                make -j `nproc` native
+                sudo cp ~/v8/out/native/d8 /usr/local/bin/
+                cd ..
+                echo "V8 successfully installed"
+                echo "Remove v8 source?"
+                select rmv8 in "Yes" "No"; do
+                    case $rmv8 in
+                        Yes ) rm -rf ~/v8; break;;
+                        No ) break;;
+                    esac
+                done
+                break;;
+            No )
+                echo "Javascript linting will not work without D8.  Run this script again if you change your mind."
+                break;;
+        esac
+    done
 fi
 
-# Git Lint.Vim
-if [ ! -d ~/.vim/bundle/lint.vim ]
+if [ ! -d ~/.vim/bundle/vim-javascript ]
 then
-    echo "Installing Lint.Vim"
-    git clone git://github.com/joestelmach/lint.vim.git ~/.vim/bundle/lint.vim
+    echo "Installing vim-javascript plugin"
+    git clone git@github.com:pangloss/vim-javascript.git ~/.vim/bundle
 fi
 
 # Install Vim-Flake8 for PEP8 Checking
