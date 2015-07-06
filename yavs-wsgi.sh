@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Install dependencies
+echo "Installing dependencies with apt-get"
+sudo apt-get install -y git subversion gyp
+
 # Install Pathogen
 if [ ! -d ~/.vim/autoload ]
 then
@@ -44,8 +48,8 @@ then
     fi
 
     cd ~/v8
-    make dependencies
-    make native
+    make -j `nproc` dependencies
+    make -j `nproc` native
     sudo cp ~/v8/out/native/d8 /usr/local/bin/
     cd ..
 #    rm -rf ~/v8
@@ -58,19 +62,10 @@ then
     git clone git://github.com/joestelmach/lint.vim.git ~/.vim/bundle/lint.vim
 fi
 
-# Install Vim-Jedi Plugin
-#if [ ! -d ~/.vim/bundle/jedi-vim ]
-#then
-#    echo "Installing Jedi plugin for Python autocompletion.  Please install jedi on every virtualenv using pip or easy_install."
-#    git clone git://github.com/davidhalter/jedi-vim.git ~/.vim/bundle/jedi-vim
-#    sudo pip install jedi
-#fi
-
 # Install Vim-Flake8 for PEP8 Checking
 if [ ! -d ~/.vim/bundle/vim-flake8 ]
 then
-    echo "Installing Flake8 plugin for PEP8 checking.  Please install flake8 on every virtualenv using pip or easy_install."
-    git clone git://github.com/nvie/vim-flake8.git ~/.vim/bundle/vim-flake8
+    echo "Installing Flake8 globally via pip for PEP8 checking.  If you use a virtualenv for development, you will need to install flake8 inside that too to enable PEP8 checking."
     sudo pip install flake8
 fi
 
