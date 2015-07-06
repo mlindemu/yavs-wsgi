@@ -13,6 +13,7 @@ The following VIM plugins and programs are installed only if they are not alread
 * [Syntastic](https://github.com/scrooloose/syntastic) - A comprehensive syntax highlighting plugin.
 * [Vim-bundle-mako](https://github.com/sophacles/vim-bundle-mako) - Mako is not included in syntastic.  This plugin is included to alleviate that.
 * [D8 from Google V8](https://code.google.com/p/v8/) - Javascript engine used by Lint.vim to check javascript syntax.  Downloads, compiles, installs, and removes source afterwards.
+* [vim-javascript](https://github.com/pangloss/vim-javascript) - Javascript linting in vim.
 * [VIM-Flake8](https://github.com/nvie/vim-flake8) - A Vim plugin that runs the currently open file through Flake8, a static syntax and style checker for Python source code. 
 
 All plugins are installed under: *~/.vim/bundle*
